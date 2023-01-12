@@ -1,0 +1,16 @@
+{
+  "name": "rtdb-admin-emulator",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase-admin": "^11.4.1"
+  }
+}
