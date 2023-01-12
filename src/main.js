@@ -1,6 +1,15 @@
 import { database, firestore } from './admin.js'
 
+// This works fine!
+const createdDoc = await firestore.collection('server').add({
+  status: 'waiting',
+})
+
+console.log('Added firestore doc, ', createdDoc.id)
+
 const ref = database.ref('server/saving-data/fireblog')
+
+console.log('Adding rtdb data....')
 await ref.child('users').set({
   alanisawesome: {
     date_of_birth: 'June 23, 1912',
@@ -11,6 +20,5 @@ await ref.child('users').set({
     full_name: 'Grace Hopper',
   },
 })
-const game = await firestore.doc('server/doc').create({
-  status: 'waiting',
-})
+
+console.log('This will never be logged. :(')

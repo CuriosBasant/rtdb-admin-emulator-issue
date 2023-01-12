@@ -6,10 +6,10 @@ import { getFirestore } from 'firebase-admin/firestore'
 if (!getApps().length) {
   process.env.FIRESTORE_EMULATOR_HOST = 'localhost:8080'
   process.env.FIREBASE_DATABASE_EMULATOR_HOST = 'localhost:9000'
-
+  console.log('Initializing firebase app!')
   initializeApp({
-    projectId: 'demo-ideations',
-    databaseURL: `https://demo-ideations.firebase.io`,
+    projectId: 'demo-admin-rtdb',
+    databaseURL: `https://demo-admin-rtdb.firebase.io`,
   })
 }
 
